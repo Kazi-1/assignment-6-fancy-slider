@@ -135,7 +135,7 @@ addEventListener('keypress', function (event) {
   }
 });
 
-// spinner
+// Extra feature:1 (spinner)
 
 const toggleSpinner = (show) => {
   const spinner = document.getElementById('loading-spinner');
@@ -148,7 +148,7 @@ const toggleSpinner = (show) => {
 
 }
 
-// Image Counter
+//Extra feature:2 (Image Counter)
 
 document.querySelector('.gallery').addEventListener('click', function () {
   const imgInput = document.getElementById('image-count');
