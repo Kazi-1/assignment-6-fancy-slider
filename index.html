@@ -16,14 +16,13 @@
 </head>
 
 <body>
-  <!-- header-area -->
-  <header class="header-area my-5">
+  <header class="header-area mb-5 sticky-top">
     <section class="container">
       <div class="row container">
         <div class="col-md-8">
           <nav class="navbar">
             <div id="header-brand" class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="index.html">
                 <h1>FANCY SLIDER</h1>
               </a>
             </div>
@@ -37,21 +36,22 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav text-warning">
-                  <a class="nav-link text-warning" href="#">HOME</a>
-                  <a class="nav-link text-warning" href="#product">SIGN IN</a>
-                  <a class="nav-link text-warning" href="#product">ABOUT US</a>
-                </div>
+              <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+              <div class="input-group">
+                <h2 class="mr-3 text-warning" for="first-class">Images Added</h2>
+                <input style="border-radius: 5px;" id="image-count" class="form-control text-center" type="text"
+                  value="0">
               </div>
+              
             </div>
-          </nav>
         </div>
+      </div>
+      </nav>
+      </div>
       </div>
     </section>
   </header>
-
-<!-- main area -->
+  
   <div class="mt-5 container">
     <h4 class="mt-2 text-center">Search Image for create slider</h4>
     <div class="form-inline mt-3 d-flex justify-content-center">

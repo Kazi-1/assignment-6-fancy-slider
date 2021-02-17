@@ -41,7 +41,7 @@ let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
   element.classList.toggle('added');
- 
+
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
@@ -71,7 +71,7 @@ const createSlider = () => {
   imagesArea.style.display = 'none';
   const duration = document.getElementById('duration').value || 1000;
   if (duration < 1000) {
-    alert('You must insert a minimum value of 1000 or more')
+    alert('You must insert at least 1000 or more')
     return;
   }
   sliders.forEach(slide => {
@@ -130,20 +130,37 @@ sliderBtn.addEventListener('click', function () {
 // Enter Button
 document.getElementById("search")
 addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-        document.getElementById("search-btn").click();
-    }
+  if (event.key === 'Enter') {
+    document.getElementById("search-btn").click();
+  }
 });
 
 // spinner
 
-const toggleSpinner = (show) =>{
+const toggleSpinner = (show) => {
   const spinner = document.getElementById('loading-spinner');
   if (show) {
     spinner.classList.remove('d-none')
   }
-  else{
+  else {
     spinner.classList.add('d-none')
   }
-  
+
 }
+
+// Image Counter
+
+document.querySelector('.gallery').addEventListener('click', function () {
+  const imgInput = document.getElementById('image-count');
+  const imgCount = parseInt(imgInput.value);
+  const imgNewCount = imgCount + 1;
+  imgInput.value = imgNewCount;
+})
+
+document.getElementById('create-slider').addEventListener('click', function () {
+  const imgInput = document.getElementById('image-count');
+  imgInput.value = 0;
+})
+
+
+
